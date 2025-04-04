@@ -49,8 +49,7 @@ train_df["potency_percent"] = (
     0.1 * train_df["activation_marker_percent"] +
     0.05 * train_df["transduction_efficiency"] +
     0.05 * train_df["viability_percent"] +
-    (-5.0 * train_df["passage_number"])  # ← larger impact!
-
+    (-5.0 * train_df["passage_number"]) + 
     noise
 ).clip(50, 100)
 
